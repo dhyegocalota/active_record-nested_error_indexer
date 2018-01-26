@@ -12,7 +12,13 @@ order = Order.create(items_attributes: [{ price: 1 }, { price: -1 }])
 order.errors # #<ActiveModel::Errors... @messages={:*"items[1].price"*: ["must be greater than 0"]}>
 ```
 
-BUT IT DOESN'T WORK FOR RAILS 4, so... let's monkey patch it :)
+BUT IT DOESN'T WORK FOR RAILS 4, so... *let's monkey patch it :)*
+
+## Installation
+Include to your Gemfile
+```ruby
+gem 'active_record-nested_error_indexer'
+```
 
 ## Maintainer
 [Dhyego Fernando](https://github.com/dhyegofernando)
